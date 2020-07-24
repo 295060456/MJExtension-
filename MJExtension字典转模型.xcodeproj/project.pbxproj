@@ -10,7 +10,7 @@
 		4B3B1EBB0F41DF104FB95A8D /* libPods-MJExtension字典转模型.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66428F5DCEB5989B6AA5B6B3 /* libPods-MJExtension字典转模型.a */; };
 		BB303C0B1E15037C0071FF9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB303C0A1E15037C0071FF9D /* main.m */; };
 		BB303C0E1E15037C0071FF9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB303C0D1E15037C0071FF9D /* AppDelegate.m */; };
-		BB303C111E15037C0071FF9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB303C101E15037C0071FF9D /* ViewController.m */; };
+		BB303C111E15037C0071FF9D /* KKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB303C101E15037C0071FF9D /* KKViewController.m */; };
 		BB303C141E15037C0071FF9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB303C121E15037C0071FF9D /* Main.storyboard */; };
 		BB303C161E15037C0071FF9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB303C151E15037C0071FF9D /* Assets.xcassets */; };
 		BB303C191E15037C0071FF9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB303C171E15037C0071FF9D /* LaunchScreen.storyboard */; };
@@ -21,6 +21,10 @@
 		BB303C2D1E150B220071FF9D /* CZUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BB303C2C1E150B220071FF9D /* CZUser.m */; };
 		BB303C301E15183C0071FF9D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BB303C2F1E15183C0071FF9D /* User.m */; };
 		BB303C321E151A520071FF9D /* weibo1.json in Resources */ = {isa = PBXBuildFile; fileRef = BB303C311E151A520071FF9D /* weibo1.json */; };
+		C54AEB3A24CA8D2E00121233 /* MKData.json in Resources */ = {isa = PBXBuildFile; fileRef = C54AEB3924CA8D2E00121233 /* MKData.json */; };
+		C54AEB4024CA8EBB00121233 /* MKCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C54AEB3F24CA8EBB00121233 /* MKCommentModel.m */; };
+		C54AEB4324CA8ED600121233 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C54AEB4124CA8ED600121233 /* BaseModel.m */; };
+		C54AEB4624CA8F5800121233 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54AEB4524CA8F5800121233 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +35,8 @@
 		BB303C0A1E15037C0071FF9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB303C0C1E15037C0071FF9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB303C0D1E15037C0071FF9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BB303C0F1E15037C0071FF9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB303C101E15037C0071FF9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB303C0F1E15037C0071FF9D /* KKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKViewController.h; sourceTree = "<group>"; };
+		BB303C101E15037C0071FF9D /* KKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKViewController.m; sourceTree = "<group>"; };
 		BB303C131E15037C0071FF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB303C151E15037C0071FF9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB303C181E15037C0071FF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,13 @@
 		BB303C2E1E15183C0071FF9D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		BB303C2F1E15183C0071FF9D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		BB303C311E151A520071FF9D /* weibo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo1.json; sourceTree = "<group>"; };
+		C54AEB3924CA8D2E00121233 /* MKData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MKData.json; sourceTree = "<group>"; };
+		C54AEB3E24CA8EBB00121233 /* MKCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCommentModel.h; sourceTree = "<group>"; };
+		C54AEB3F24CA8EBB00121233 /* MKCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCommentModel.m; sourceTree = "<group>"; };
+		C54AEB4124CA8ED600121233 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		C54AEB4224CA8ED600121233 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		C54AEB4424CA8F5800121233 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C54AEB4524CA8F5800121233 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,27 +112,17 @@
 		BB303C081E15037C0071FF9D /* MJExtension字典转模型 */ = {
 			isa = PBXGroup;
 			children = (
-				BB303C2E1E15183C0071FF9D /* User.h */,
-				BB303C2F1E15183C0071FF9D /* User.m */,
-				BB303C311E151A520071FF9D /* weibo1.json */,
-				BB303C201E1505630071FF9D /* weibo.json */,
-				BB303C0C1E15037C0071FF9D /* AppDelegate.h */,
-				BB303C0D1E15037C0071FF9D /* AppDelegate.m */,
-				BB303C0F1E15037C0071FF9D /* ViewController.h */,
-				BB303C101E15037C0071FF9D /* ViewController.m */,
-				BB303C121E15037C0071FF9D /* Main.storyboard */,
-				BB303C151E15037C0071FF9D /* Assets.xcassets */,
-				BB303C171E15037C0071FF9D /* LaunchScreen.storyboard */,
 				BB303C1A1E15037C0071FF9D /* Info.plist */,
 				BB303C091E15037C0071FF9D /* Supporting Files */,
-				BB303C221E1505EE0071FF9D /* CZWeibo.h */,
-				BB303C231E1505EE0071FF9D /* CZWeibo.m */,
-				BB303C251E1507C00071FF9D /* CZStatus.h */,
-				BB303C261E1507C00071FF9D /* CZStatus.m */,
-				BB303C281E1507CF0071FF9D /* CZAd.h */,
-				BB303C291E1507CF0071FF9D /* CZAd.m */,
-				BB303C2B1E150B220071FF9D /* CZUser.h */,
-				BB303C2C1E150B220071FF9D /* CZUser.m */,
+				C54AEB3824CA8CEA00121233 /* Model */,
+				C54AEB3724CA8CC700121233 /* Others */,
+				C54AEB3624CA8CA700121233 /* Data */,
+				C54AEB4424CA8F5800121233 /* ViewController.h */,
+				C54AEB4524CA8F5800121233 /* ViewController.m */,
+				C54AEB4224CA8ED600121233 /* BaseModel.h */,
+				C54AEB4124CA8ED600121233 /* BaseModel.m */,
+				C54AEB3E24CA8EBB00121233 /* MKCommentModel.h */,
+				C54AEB3F24CA8EBB00121233 /* MKCommentModel.m */,
 			);
 			path = "MJExtension字典转模型";
 			sourceTree = "<group>";
@@ -132,6 +133,47 @@
 				BB303C0A1E15037C0071FF9D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C54AEB3624CA8CA700121233 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BB303C311E151A520071FF9D /* weibo1.json */,
+				BB303C201E1505630071FF9D /* weibo.json */,
+				C54AEB3924CA8D2E00121233 /* MKData.json */,
+				BB303C0F1E15037C0071FF9D /* KKViewController.h */,
+				BB303C101E15037C0071FF9D /* KKViewController.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		C54AEB3724CA8CC700121233 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BB303C0C1E15037C0071FF9D /* AppDelegate.h */,
+				BB303C0D1E15037C0071FF9D /* AppDelegate.m */,
+				BB303C121E15037C0071FF9D /* Main.storyboard */,
+				BB303C151E15037C0071FF9D /* Assets.xcassets */,
+				BB303C171E15037C0071FF9D /* LaunchScreen.storyboard */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		C54AEB3824CA8CEA00121233 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB303C2E1E15183C0071FF9D /* User.h */,
+				BB303C2F1E15183C0071FF9D /* User.m */,
+				BB303C281E1507CF0071FF9D /* CZAd.h */,
+				BB303C291E1507CF0071FF9D /* CZAd.m */,
+				BB303C251E1507C00071FF9D /* CZStatus.h */,
+				BB303C261E1507C00071FF9D /* CZStatus.m */,
+				BB303C2B1E150B220071FF9D /* CZUser.h */,
+				BB303C2C1E150B220071FF9D /* CZUser.m */,
+				BB303C221E1505EE0071FF9D /* CZWeibo.h */,
+				BB303C231E1505EE0071FF9D /* CZWeibo.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +220,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -198,6 +241,7 @@
 			files = (
 				BB303C211E1505630071FF9D /* weibo.json in Resources */,
 				BB303C191E15037C0071FF9D /* LaunchScreen.storyboard in Resources */,
+				C54AEB3A24CA8D2E00121233 /* MKData.json in Resources */,
 				BB303C161E15037C0071FF9D /* Assets.xcassets in Resources */,
 				BB303C141E15037C0071FF9D /* Main.storyboard in Resources */,
 				BB303C321E151A520071FF9D /* weibo1.json in Resources */,
@@ -260,11 +304,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB303C301E15183C0071FF9D /* User.m in Sources */,
-				BB303C111E15037C0071FF9D /* ViewController.m in Sources */,
+				BB303C111E15037C0071FF9D /* KKViewController.m in Sources */,
+				C54AEB4324CA8ED600121233 /* BaseModel.m in Sources */,
 				BB303C0E1E15037C0071FF9D /* AppDelegate.m in Sources */,
 				BB303C2D1E150B220071FF9D /* CZUser.m in Sources */,
+				C54AEB4624CA8F5800121233 /* ViewController.m in Sources */,
 				BB303C0B1E15037C0071FF9D /* main.m in Sources */,
 				BB303C271E1507C00071FF9D /* CZStatus.m in Sources */,
+				C54AEB4024CA8EBB00121233 /* MKCommentModel.m in Sources */,
 				BB303C241E1505EE0071FF9D /* CZWeibo.m in Sources */,
 				BB303C2A1E1507CF0071FF9D /* CZAd.m in Sources */,
 			);

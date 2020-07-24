@@ -2,13 +2,17 @@
 //  ViewController.m
 //  MJExtension字典转模型
 //
-//  Created by wanglei on 16/12/29.
-//  Copyright © 2016年 wanglei. All rights reserved.
+//  Created by Jobs on 2020/7/24.
+//  Copyright © 2020 wanglei. All rights reserved.
 //
 
 #import "ViewController.h"
 
 @interface ViewController ()
+
+@property(nonatomic,strong)MKCommentModel *commentModel;
+@property(nonatomic,strong)NSMutableArray <MKCommentModel *>* commentModelMutArr;
+@property(nonatomic,strong)NSMutableArray <MKFirstCommentModel *>*firstCommentModelMutArr;
 
 @end
 
@@ -16,67 +20,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self changeTheArrayToDoubleModel];
-    [self changeTheDictToModel];
+    [self KKK];
 }
 
-// 将数组转换为模型(模型中有嵌套数组和字典)
-- (void)changeTheArrayToDoubleModel{
-    
-    
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"weibo1" ofType:@"json"];
+-(void)KKK{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"MKData" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
-    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    NSArray <CZWeibo *>*Array = [CZWeibo mj_objectArrayWithKeyValuesArray:array];
-    CZWeibo *weibo = Array[0];
-    CZStatus *wlid = weibo.statuses[0];
-    CZUser *user = wlid.user;
-    
-    NSLog(@"%@",user.descriptionStr);
-   
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+
+    self.commentModel = [MKCommentModel mj_objectWithKeyValues:dic[@"data"]];
+    self.commentModel.listMytArr = [MKFirstCommentModel mj_objectArrayWithKeyValuesArray:dic[@"data"][@"list"]];
+    if (self.commentModel.listMytArr) {
+        [self.commentModel.listMytArr enumerateObjectsUsingBlock:^(id  _Nonnull obj,
+                                                                   NSUInteger idx,
+                                                                   BOOL * _Nonnull stop) {
+            MKFirstCommentModel *firstCommentModel = [MKFirstCommentModel mj_objectWithKeyValues:self.commentModel.listMytArr[idx]];
+            
+            [self.commentModel.listMytArr enumerateObjectsUsingBlock:^(MKFirstCommentModel * _Nonnull obj,
+                                                                       NSUInteger idx,
+                                                                       BOOL * _Nonnull stop) {
+                firstCommentModel.childMutArr = [MKChildCommentModel mj_objectArrayWithKeyValuesArray:dic[@"data"][@"list"][idx][@"child"]];
+                NSLog(@"");
+            }];
+            
+            [self.firstCommentModelMutArr addObject:firstCommentModel];
+            NSLog(@"");
+        }];
+    }
+     NSLog(@"");
 }
 
-
-// 将数组转换为模型
-- (void)changeTheArrayToModel{
-    NSArray *dictArray = @[
-                           @{
-                               @"name" : @"Jack",
-                               @"icon" : @"lufy.png",
-                               },
-                           @{
-                               @"name" : @"Rose",
-                               @"icon" : @"nami.png",
-                               }
-                           ];
-    
-    // 将字典数组转为User模型数组
-    NSArray *userArray = [User mj_objectArrayWithKeyValuesArray:dictArray];
-    // 打印userArray数组中的User模型属性
-    for (User *user in userArray) {
-        NSLog(@"name=%@, icon=%@", user.name, user.icon);}
-    // name=Jack, icon=lufy.png
-  
+-(NSMutableArray<MKFirstCommentModel *> *)firstCommentModelMutArr{
+    if (!_firstCommentModelMutArr) {
+        _firstCommentModelMutArr = NSMutableArray.array;
+    }return _firstCommentModelMutArr;
 }
 
-// 将字典转换为模型
-- (void)changeTheDictToModel{
-    
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"weibo" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    CZWeibo *weibo = [CZWeibo mj_objectWithKeyValues:dict];
-    CZStatus *wlid = weibo.statuses[0];
-    CZUser *user = wlid.user;
-    
-    NSLog(@"%@",user.descriptionStr);
-   
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

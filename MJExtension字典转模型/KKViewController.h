@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "MJExtension.h"
-#import "BaseModel.h"
-#import "MKCommentModel.h"
+#import "CZStatus.h"
+#import "CZAd.h"
+#import "CZWeibo.h"
+#import "CZUser.h"
+#import "User.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewController : UIViewController
+@interface KKViewController : UIViewController
 
 @end
 
