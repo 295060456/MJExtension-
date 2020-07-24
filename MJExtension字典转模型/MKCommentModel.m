@@ -21,6 +21,16 @@
 
 @implementation MKFirstCommentModel
 
+-(instancetype)init{
+    if (self = [super init]) {
+        [MKFirstCommentModel mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                @"MKChildCommentModel":@"childMutArr"
+            };
+        }];
+    }return self;
+}
+
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     /* 返回的字典，key为模型属性名，value为转化的字典的多级key */
     return @{
@@ -32,10 +42,14 @@
 
 @implementation MKCommentModel
 
-+ (NSDictionary *)mj_objectClassInArray{
-    return @{
-             @"list" : @"listMytArr"
-             };
+-(instancetype)init{
+    if (self = [super init]) {
+        [MKCommentModel mj_setupObjectClassInArray:^NSDictionary *{
+            return @{
+                @"listMytArr":@"MKFirstCommentModel"
+            };
+        }];
+    }return self;
 }
 
 @end
